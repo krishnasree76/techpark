@@ -1,14 +1,20 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter, Montserrat } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { Header } from '@/components/header'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-montserrat', weight: ['400', '500', '600', '700', '800'] })
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+  weight: ['400', '500', '600', '700', '800'],
+})
 
 export const metadata: Metadata = {
   title: 'Techpack Technology | Aerospace & Defence Manufacturing',
-  description: 'Precision CNC Machining & Integrated Manufacturing Solutions for Aerospace, Automotive & Defence Industries. ISO 9001:2015 Certified.',
+  description:
+    'Precision CNC Machining & Integrated Manufacturing Solutions for Aerospace, Automotive & Defence Industries. ISO 9001:2015 Certified.',
   icons: {
     icon: '/images/logo.png',
   },
@@ -26,7 +32,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${montserrat.variable}`}>
       <body className="font-sans antialiased">
+
+        {/* Global Navbar */}
+        <Header />
+
+        {/* Page Content */}
         {children}
+
         <Analytics />
       </body>
     </html>
