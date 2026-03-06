@@ -298,57 +298,66 @@ export function Services() {
 
       {/* Detail Side Panel */}
       {activeService && (
-        <div className="fixed inset-0 z-50 flex">
+  <div className="fixed inset-0 z-50 flex">
 
-          {/* Background Overlay */}
-          <div
-            className="flex-1 bg-black/40"
+    {/* Overlay */}
+    <div
+      className="flex-1 bg-black/30 backdrop-blur-sm"
+      onClick={() => setActiveService(null)}
+    />
+
+    {/* Side Panel */}
+    <div className="w-full max-w-xl bg-white h-full shadow-xl border-l border-border overflow-y-auto relative">
+
+      <div className="p-8">
+
+        {/* Header Actions */}
+        <div className="flex items-center justify-between mb-6">
+
+          <button
             onClick={() => setActiveService(null)}
-          />
+            className="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-primary transition"
+          >
+            <ArrowLeft size={16} />
+            Back
+          </button>
 
-          {/* Panel */}
-          <div className="w-full max-w-xl bg-white h-full shadow-2xl overflow-y-auto p-8 relative">
+          <button
+            onClick={() => setActiveService(null)}
+            className="p-2 rounded-md text-gray-700 hover:bg-gray-100 transition"
+          >
+            <X size={20} />
+          </button>
 
-            {/* Close Button */}
-            <button
-              onClick={() => setActiveService(null)}
-              className="absolute top-6 right-6"
-            >
-              <X size={22} />
-            </button>
-
-            {/* Back */}
-            <button
-              onClick={() => setActiveService(null)}
-              className="flex items-center gap-2 text-sm mb-6 text-primary"
-            >
-              <ArrowLeft size={16} />
-              Back
-            </button>
-
-            {/* Image */}
-            <div className="relative w-full h-64 rounded-lg overflow-hidden mb-6">
-              <Image
-                src={activeService.image}
-                alt={activeService.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            {/* Title */}
-            <h3 className="text-2xl font-semibold mb-4">
-              {activeService.title}
-            </h3>
-
-            {/* Details */}
-            <p className="text-sm text-muted-foreground whitespace-pre-line">
-              {activeService.details}
-            </p>
-
-          </div>
         </div>
-      )}
+
+        {/* Image */}
+        <div className="relative w-full h-64 rounded-lg overflow-hidden border border-border mb-6">
+          <Image
+            src={activeService.image}
+            alt={activeService.title}
+            fill
+            className="object-cover"
+          />
+        </div>
+
+        {/* Title */}
+        <h3 className="text-2xl font-semibold text-gray-700 mb-4">
+          {activeService.title}
+        </h3>
+
+        {/* Divider */}
+        <div className="h-1 w-14 bg-primary rounded-full mb-6"></div>
+
+        {/* Details */}
+        <p className="text-sm leading-relaxed text-gray-700 whitespace-pre-line">
+          {activeService.details}
+        </p>
+
+      </div>
+    </div>
+  </div>
+)}
     </section>
   )
 }
