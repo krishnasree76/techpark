@@ -104,11 +104,11 @@ import Link from "next/link"
 import { Menu, X } from "lucide-react"
 
 const navLinks = [
-  { label: "About", href: "/#about" },
-  { label: "Services", href: "/#services" },
-  { label: "Industries", href: "/#industries" },
-  { label: "Leadership", href: "/#leadership" },
-  { label: "Quality", href: "/#quality" },
+  { label: "Home", href: "/home" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  // { label: "Industries", href: "/industries" },
+  { label: "Quality", href: "/quality" },
   { label: "Contact", href: "/#contact" },
   { label: "Careers", href: "/careers" }
 ]
