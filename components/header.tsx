@@ -147,7 +147,7 @@ export function Header() {
           ))}
 
           <Link
-            href="/#contact"
+            href="/contact"
             className="ml-2 rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-white uppercase hover:bg-primary/90 transition"
           >
             Request a Quote
