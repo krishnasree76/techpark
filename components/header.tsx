@@ -109,7 +109,7 @@ const navLinks = [
   { label: "Services", href: "/services" },
   // { label: "Industries", href: "/industries" },
   { label: "Quality", href: "/quality" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
   { label: "Careers", href: "/careers" }
 ]
 
