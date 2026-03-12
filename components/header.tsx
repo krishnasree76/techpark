@@ -107,7 +107,7 @@ const navLinks = [
   { label: "Home", href: "/home" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  // { label: "Industries", href: "/industries" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Quality", href: "/quality" },
   { label: "Contact", href: "/contact" },
   { label: "Careers", href: "/careers" }

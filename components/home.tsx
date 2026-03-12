@@ -1,5 +1,5 @@
 "use client"
-
+import { MapPin, Phone } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import {
@@ -17,51 +17,67 @@ export function HomePage() {
       {/* HERO SECTION */}
       <section className="relative py-28 lg:py-36 border-b border-border">
 
-        <div className="absolute inset-0 -z-10">
-          <Image
-            src="/images/hero-cnc.jpg"
-            alt="CNC machining"
-            fill
-            className="object-cover opacity-20"
-          />
-        </div>
+  {/* Background */}
+  <div className="absolute inset-0 -z-10">
+    <Image
+      src="/images/hero-cnc.jpg"
+      alt="CNC machining"
+      fill
+      className="object-cover"
+    />
+    <div className="absolute inset-0 bg-black/60" />
+  </div>
 
-        <div className="mx-auto max-w-7xl px-6 text-center">
+  <div className="mx-auto max-w-7xl px-6 text-center text-white">
 
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-            Precision CNC Engineering for Aerospace, Defence & Automotive Industries
-          </h1>
+    {/* Title */}
+    <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+      Precision CNC Engineering for Aerospace, Defence & Automotive Industries
+    </h1>
 
-          <p className="mt-6 max-w-3xl mx-auto text-muted-foreground text-lg">
-            Delivering high-accuracy, mission-critical components through advanced
-            machining technologies and disciplined quality systems.
-          </p>
+    {/* Subtitle */}
+    <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-200">
+      Delivering high-accuracy, mission-critical components through advanced
+      machining technologies and disciplined quality systems.
+    </p>
 
-          <div className="mt-6 text-sm text-muted-foreground">
-            📍 Bangalore, India &nbsp;&nbsp; 📞 +91 7829070378
-          </div>
+    {/* Location + Phone */}
+    <div className="mt-6 flex justify-center flex-wrap items-center gap-6 text-sm text-gray-200">
 
-          <div className="mt-8 flex justify-center gap-4">
+      <div className="flex items-center gap-2">
+        <MapPin className="w-4 h-4 text-primary" />
+        <span>Bangalore, India</span>
+      </div>
 
-            <Link
-              href="/contact"
-              className="px-6 py-3 bg-primary text-white rounded-md font-semibold"
-            >
-              REQUEST A QUOTE
-            </Link>
+      <div className="flex items-center gap-2">
+        <Phone className="w-4 h-4 text-primary" />
+        <span>+91 7829070378</span>
+      </div>
 
-            <Link
-              href="/contact"
-              className="px-6 py-3 border border-border rounded-md font-semibold"
-            >
-              CONTACT US
-            </Link>
+    </div>
 
-          </div>
+    {/* Buttons */}
+    <div className="mt-10 flex justify-center gap-4 flex-wrap">
 
-        </div>
+      <Link
+        href="/contact"
+        className="px-6 py-3 bg-primary text-white rounded-md font-semibold hover:bg-primary/90 transition"
+      >
+        REQUEST A QUOTE
+      </Link>
 
-      </section>
+      <Link
+        href="/contact"
+        className="px-6 py-3 border border-white text-white rounded-md font-semibold hover:bg-white hover:text-black transition"
+      >
+        CONTACT US
+      </Link>
+
+    </div>
+
+  </div>
+
+</section>
 
       {/* ABOUT SECTION */}
       <section className="py-24">
