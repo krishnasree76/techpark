@@ -308,7 +308,7 @@ export function Footer() {
               src="/images/image.png"
               alt="Techpack Technology Logo"
               width={160}
-              height={48}
+              height={60}
               className="max-h-12 w-auto mb-5"
             />
 

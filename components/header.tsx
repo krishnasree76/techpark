@@ -228,7 +228,7 @@ export function Header() {
             src="/images/image.png"
             alt="Techpack Technology Logo"
             width={160}
-            height={48}
+            height={100}
             className="max-h-10 w-auto md:max-h-12"
             priority
           />
